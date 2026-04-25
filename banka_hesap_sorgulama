@@ -22,24 +22,24 @@ int main() {
             switch (secim) {
                 case 1:
                     printf("\nPara olmayan hesaplar:\n");
-                    while (fscanf(Myptr, "%d %s %lf", &hesapNo, ad, &bakiye) == 3) {
-                        if (bakiye == 0)
+                    while(fscanf(Myptr, "%d %39s %lf", &hesapNo, ad, &bakiye) == 3) {
+                        if (bakiye > -0.001 && bakiye < 0.001)
                             printf("%-10d %-13s %7.2f\n", hesapNo, ad, bakiye);
                     }
                     break;
 
                 case 2:
                     printf("\nBorclu hesaplar:\n");
-                    while (fscanf(Myptr, "%d %s %lf", &hesapNo, ad, &bakiye) == 3) {
-                        if (bakiye < 0)
+                    while (fscanf(Myptr, "%d %39s %lf", &hesapNo, ad, &bakiye) == 3) {
+                        if (bakiye < -0.001)
                             printf("%-10d %-13s %7.2f\n", hesapNo, ad, bakiye);
                     }
                     break;
 
                 case 3:
                     printf("\nHesapta para olan hesaplar:\n");
-                    while (fscanf(Myptr, "%d %s %lf", &hesapNo, ad, &bakiye) == 3) {
-                        if (bakiye > 0)
+                    while (fscanf(Myptr, "%d %39s %lf", &hesapNo, ad, &bakiye) == 3) {
+                        if (bakiye > 0.001)
                             printf("%-10d %-13s %7.2f\n", hesapNo, ad, bakiye);
                     }
                     break;
