@@ -1,16 +1,9 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 
 struct books{
-char* bookname;
-char* writer;
+const char* bookname;
+const char* writer;
 int page;
 int year;
 };
@@ -32,6 +25,7 @@ printf("%d. book\n:",i+1);
 printf("bookname:%s\n",x[i].bookname);
 printf("writer:%s\n",x[i].writer);
 printf("page:%d\n",x[i].page);
+printf("year:%d\n", x[i].year);
 }
 return 0;
 }
