@@ -50,6 +50,9 @@ void print_list(Node* head){
      
     printf("NULL\n");
 }
+/*merhaba nuray ben dünyalı,
+2026 daki halinim çok yol kat ettin be
+ama hala hedeflediğin noktada değilsin 🥲*/
 int main(){
     Node*head=NULL;
     
